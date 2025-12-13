@@ -219,31 +219,214 @@ section {
 }
 
 
-/* CHARACTERS*/
-
-.hogwarts-section {
-  background-image: url("characters-img.jpg");
-  position: relative; 
-  width: 102%;
-  height: 110vh;
-   background-color: #fbfbfb;
+/* HOUSES SECTION */
+.houses {
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+  position: relative;
+  overflow: hidden;
 }
 
-.hogwarts-section::after {
-  content: "";
+.houses-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2vw 0;
+}
+
+/* All houses crest at top */
+.all-houses-crest {
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+}
+
+.all-houses-crest img {
+  width: 15vw;
+  height: auto;
+  filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.5));
+}
+
+/* House flags row */
+.house-flags-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2vw;
+  width: 100%;
+}
+
+.house-flag img {
+  width: 12vw;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.5));
+}
+
+.house-flag img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+}
+
+/* Center Hogwarts flag - larger */
+.center-flag img {
+  width: 18vw;
+  height: auto;
+  filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.7));
+  transition: transform 0.3s;
+}
+
+.center-flag img:hover {
+  transform: scale(1.05);
+}
+
+/* HOUSE TIES SECTION */
+.ties-section {
+  background: linear-gradient(180deg, #0a0a0a 0%, #16213e 50%, #0a0a0a 100%);
+  min-height: 100vh;
+  height: auto;
+  padding: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ties-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5vw;
+  max-width: 80vw;
+  margin-left: -10vw;
+}
+
+.tie-wrapper {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tie-wrapper img {
+  width: 18vw;
+  height: auto;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.6));
+}
+
+.tie-wrapper:hover img {
+  transform: scale(1.1);
+}
+
+/* Popup styles */
+.tie-popup {
   position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6); /* adjust transparency */
-  pointer-events: none;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20vw;
+  padding: 1.2vw;
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  font-family: 'Georgia', serif;
+  z-index: 10;
 }
 
-.title-hog {
-  position: absolute;
-  top: 90px;   /* move down */
-  left: 60px; /* already there */
-  color: white;
-  font-size: 2.1vw;
+/* Left column ties - popup appears on right */
+.popup-left {
+  left: 105%;
 }
+
+/* Right column ties - popup appears on left */
+.popup-right {
+  right: 105%;
+}
+
+.tie-wrapper:hover .tie-popup {
+  opacity: 1;
+  visibility: visible;
+}
+
+.tie-popup h3 {
+  font-family: 'Harry Potter', serif;
+  font-size: 1.5vw;
+  margin-bottom: 0.8vw;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.tie-popup p {
+  font-size: 0.8vw;
+  line-height: 1.5;
+}
+
+/* Gryffindor popup */
+.gryffindor .tie-popup {
+  background: linear-gradient(135deg, #740001 0%, #ae0001 50%, #eeba30 100%);
+  border: 3px solid #eeba30;
+  color: #fff;
+}
+
+.gryffindor .tie-popup h3 {
+  color: #ffd700;
+  text-shadow: 2px 2px 4px #740001;
+}
+
+.gryffindor:hover img {
+  filter: drop-shadow(0 0 25px #ae0001);
+}
+
+/* Hufflepuff popup */
+.hufflepuff .tie-popup {
+  background: linear-gradient(135deg, #000000 0%, #372e29 50%, #f0c75e 100%);
+  border: 3px solid #f0c75e;
+  color: #fff;
+}
+
+.hufflepuff .tie-popup h3 {
+  color: #f0c75e;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.hufflepuff:hover img {
+  filter: drop-shadow(0 0 25px #f0c75e);
+}
+
+/* Ravenclaw popup */
+.ravenclaw .tie-popup {
+  background: linear-gradient(135deg, #0e1a40 0%, #222f5b 50%, #946b2d 100%);
+  border: 3px solid #946b2d;
+  color: #fff;
+}
+
+.ravenclaw .tie-popup h3 {
+  color: #946b2d;
+  text-shadow: 2px 2px 4px #0e1a40;
+}
+
+.ravenclaw:hover img {
+  filter: drop-shadow(0 0 25px #222f5b);
+}
+
+/* Slytherin popup */
+.slytherin .tie-popup {
+  background: linear-gradient(135deg, #1a472a 0%, #2a623d 50%, #aaaaaa 100%);
+  border: 3px solid #aaaaaa;
+  color: #fff;
+}
+
+.slytherin .tie-popup h3 {
+  color: #c0c0c0;
+  text-shadow: 2px 2px 4px #1a472a;
+}
+
+.slytherin:hover img {
+  filter: drop-shadow(0 0 25px #2a623d);
+}
+
 .hermoine {
     width: 100%;
     padding: 20px;
