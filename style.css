@@ -14,14 +14,14 @@ section {
 
 
 .title-img {
-  width: 800px;        /* adjust size */
-  height: 300px;
+  width: 62vw;        /* adjust size */
+  height: 22vw;
   background-image: url("title-white.png");
   background-size: contain;
   background-repeat: no-repeat;
   transition: 0.3s;
    position: absolute;
-  bottom: 113px;
+  bottom: 130px;
   right: 113px;
 }
 
@@ -40,8 +40,8 @@ section {
 
 .animated-mail {
   position: absolute;
-  height: 150px;
-  width: 200px;
+  height: 11.5vw;
+  width: 14.5vw;
   transition: .4s;
 }
 
@@ -57,17 +57,17 @@ section {
 }
 
 .mail-body {
-  border-width: 0 0 100px 200px;
+  border-width: 0 0 7.25vw 14.5vw;
   border-color: transparent transparent #e95f55 transparent;
 }
 
 .top-fold {
   position: absolute;
-  top: 50px;
+  top: 4.25vw;
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 50px 100px 0 100px;
+  border-width: 3.6vw 7.25vw 0 7.25vw;
   transform-origin: 50% 0%;
   transition: transform .4s .4s, z-index .2s .4s;
   border-color: #cf4a43 transparent transparent transparent;
@@ -77,24 +77,24 @@ section {
 .back-fold {
   position: absolute;
   bottom: 0;
-  width: 200px;
-  height: 100px;
+  width: 14.5vw;
+  height: 7.25vw;
   background: #cf4a43;
   z-index: 0;
 }
 
 .left-fold {
-  border-width: 50px 0 50px 100px;
+  border-width: 3.6vw 0 3.6vw 7.25vw;
   border-color: transparent transparent transparent #e15349;
 }
 
 /* letter inside */
 .letter {
   position: absolute;
-  left: 20px;
+  left: 1.45vw;
   bottom: 0;
-  width: 160px;
-  height: 60px;
+  width: 11.6vw;
+  height: 4.3vw;
   background: white;
   z-index: 1;
   overflow: hidden;
@@ -102,16 +102,16 @@ section {
 }
 
 .letter-border {
-  height: 10px;
+  height: 0.72vw;
   width: 100%;
 }
 
 /* text lines */
 .letter-title,
 .letter-context {
-  margin-top: 10px;
-  margin-left: 5px;
-  height: 10px;
+  margin-top: 0.72vw;
+  margin-left: 0.36vw;
+  height: 0.72vw;
 }
 
 .letter-title { width: 40%; }
@@ -126,17 +126,17 @@ section {
 }
 
 .letter-stamp {
-  margin-top: 30px;
-  margin-left: 120px;
+  margin-top: 2.2vw;
+  margin-left: 8.7vw;
   border-radius: 50%;
-  height: 30px;
-  width: 30px;
+  height: 2.2vw;
+  width: 2.2vw;
   opacity: 0.3;
 }
 
 /* hover animations */
 .letter-image:hover .animated-mail {
-  transform: translateY(50px);
+  transform: translateY(3.6vw);
 }
 
 .letter-image:hover .top-fold {
@@ -146,11 +146,11 @@ section {
 }
 
 .letter-image:hover .letter {
-  height: 180px;
+  height: 13vw;
 }
 
 .letter-image:hover .shadow {
-  width: 250px;
+  width: 18vw;
 }
 /* base style shared by all nav items */
 .letter-nav a {
@@ -158,14 +158,14 @@ section {
   text-decoration: none;
   color: #ff3333;  /* start red */
   font-weight: 700;
-  font-size: 14px;
+  font-size: 1vw;
   animation-name: redToGoldGlow;
   animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  padding: 3px;
-  padding-left: 7px;   /* extra 3px to the left */
+  padding: 0.22vw;
+  padding-left: 0.5vw;   /* extra 3px to the left */
   font-family: 'Harry Potter', serif;
 }
 
@@ -242,7 +242,7 @@ section {
   top: 90px;   /* move down */
   left: 60px; /* already there */
   color: white;
-  font-size: 40px;
+  font-size: 2.1vw;
 }
 .hermoine {
     width: 100%;
