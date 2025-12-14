@@ -63,7 +63,7 @@ section {
 
 .mail-body {
   border-width: 0 0 7.25vw 14.5vw;
-  border-color: transparent transparent #e95f55 transparent;
+  border-color: transparent transparent #d3bb90 transparent;
 }
 
 .top-fold {
@@ -75,7 +75,7 @@ section {
   border-width: 3.6vw 7.25vw 0 7.25vw;
   transform-origin: 50% 0%;
   transition: transform .4s .4s, z-index .2s .4s;
-  border-color: #cf4a43 transparent transparent transparent;
+  border-color: #bca67d transparent transparent transparent;
   z-index: 2;
 }
 
@@ -84,13 +84,13 @@ section {
   bottom: 0;
   width: 14.5vw;
   height: 7.25vw;
-  background: #cf4a43;
+  background: #bca67d;
   z-index: 0;
 }
 
 .left-fold {
   border-width: 3.6vw 0 3.6vw 7.25vw;
-  border-color: transparent transparent transparent #e15349;
+  border-color: transparent transparent transparent #c8ae7e;
 }
 
 /* letter inside */
@@ -127,7 +127,7 @@ section {
 .letter-title,
 .letter-context,
 .letter-stamp {
-  background: #cb5a5e;
+  background: #d3bb90;
 }
 
 .letter-stamp {
