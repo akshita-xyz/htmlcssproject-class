@@ -3,7 +3,12 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
-
+.section,
+.card,
+img {
+  will-change: transform;
+  transform: translateZ(0);
+}
 
 section {
   width: 100%;
@@ -739,6 +744,10 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+      display: block;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
 }
 
 .character-image {
