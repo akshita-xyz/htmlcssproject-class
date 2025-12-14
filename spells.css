@@ -5,10 +5,15 @@
     box-sizing:border-box;
 }
 
-/* Override the global section height for spell section */
+/* Override the global section styles for spell sections */
 .spell-book-section {
     height: auto !important;
     min-height: 100vh;
+}
+
+.spell-book {
+    height: auto !important;
+    padding: 40px 60px 100px !important;
 }
 
 body{
