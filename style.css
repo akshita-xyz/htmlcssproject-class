@@ -719,14 +719,18 @@ section {
 #harry_potter .character-card:hover{
   box-shadow: 0 25px 70px rgba(30, 144, 255, 0.3);
 }
-/* dobby */
+/* dubledoor */
 #dumbledore .character-card:hover{
   box-shadow: 0 25px 70px  rgba(192, 192, 192, 0.3);
 }
 
 /* draco malfoy */
 #draco_malfoy .character-card:hover{
-  box-shadow: 0 25px 70px  rgba(255, 165, 0, 0.3);
+  box-shadow: 0 25px 70px  rgba(0, 128, 0, 0.3);
+}
+/* Severu Ssnape */
+#SeverusSnape .character-card:hover{
+  box-shadow: 0 25px 70px  rgba(0, 128, 0, 0.3);
 }
 /* ============================================
    CHARACTER IMAGE STYLES
