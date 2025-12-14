@@ -715,7 +715,7 @@ section {
   box-shadow: 0 25px 70px rgba(30, 144, 255, 0.3);
 }
 /* dobby */
-#dobby .character-card:hover{
+#dumbledore .character-card:hover{
   box-shadow: 0 25px 70px  rgba(192, 192, 192, 0.3);
 }
 
@@ -1107,3 +1107,14 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(180deg, #ffd700 0%, #ff8c00 100%);
 }
+html {
+  scroll-behavior: smooth;
+}
+
+#spells {
+  scroll-margin-top: 100px; /* Adjust for fixed navbar height if any */
+}
+
+/* ============================================
+   Wands
+   ============================================ */
