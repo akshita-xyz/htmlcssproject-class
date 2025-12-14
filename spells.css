@@ -1,0 +1,183 @@
+/* ===== RESET ===== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:radial-gradient(circle at top,#020111,#000);
+    color:#f4f1e8;
+    font-family:'Cinzel',serif;
+    overflow-x:hidden;
+}
+
+/* ===== HEADER ===== */
+header{
+    text-align:center;
+    padding:80px 20px 60px;
+}
+
+header h1{
+    font-size:3.5rem;
+    color:gold;
+    text-shadow:0 0 30px gold;
+    animation:glow 3s infinite alternate;
+}
+
+header p{
+    font-family:'Uncial Antiqua',cursive;
+    letter-spacing:3px;
+    opacity:.85;
+}
+
+/* ===== SPELL GRID ===== */
+.spell-book{
+    padding:40px 60px 100px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:60px;
+}
+
+/* ===== SPELL CARD ===== */
+.spell-card{
+    position:relative;
+    padding:35px;
+    border-radius:22px;
+    background:
+        linear-gradient(145deg,rgba(255,255,255,.08),rgba(0,0,0,.9)),
+        repeating-linear-gradient(
+            0deg,
+            rgba(255,255,255,.03),
+            rgba(255,255,255,.03) 1px,
+            transparent 1px,
+            transparent 4px
+        );
+    border:1px solid rgba(255,255,255,.25);
+    text-decoration:none;
+    color:inherit;
+    overflow:hidden;
+    transition:.8s;
+}
+
+.spell-card:hover{
+    transform:translateY(-20px) scale(1.08);
+}
+
+/* ===== TEXT ===== */
+.spell-card h2{
+    font-size:1.8rem;
+    color:#ffdd99;
+    margin-bottom:15px;
+}
+
+.spell-card p{
+    line-height:1.7;
+    opacity:.9;
+}
+
+.rank{
+    display:inline-block;
+    margin-top:18px;
+    padding:6px 18px;
+    border-radius:40px;
+    border:1px solid gold;
+    font-size:.7rem;
+    letter-spacing:2px;
+}
+
+.rank.dark{
+    border-color:crimson;
+    color:crimson;
+}
+
+
+/* ===== RARITY SHADOWS ===== */
+.common{box-shadow: 0 0 40px rgba(255, 215, 0, 0.66);}
+.arcane{box-shadow:0 0 40px rgba(0,200,255,.5);}
+.mythic{box-shadow:0 0 55px rgba(180,0,255,.6);}
+.ancient{box-shadow:0 0 70px rgba(255,0,0,.6);}
+
+/* ===== MODAL ===== */
+.spell-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.85);
+    backdrop-filter:blur(6px);
+    opacity:0;
+    pointer-events:none;
+    transition:.6s;
+    z-index:999;
+}
+
+.spell-modal:target{
+    opacity:1;
+    pointer-events:auto;
+}
+
+.modal-content{
+    max-width:650px;
+    margin:10vh auto;
+    padding:50px;
+    border-radius:25px;
+    background:
+        radial-gradient(circle at top,rgba(255,215,0,.25),transparent 70%),
+        linear-gradient(160deg,rgba(255,255,255,.08),rgba(0,0,0,.9));
+    border:1px solid rgba(255,255,255,.3);
+    box-shadow:0 0 80px rgba(255,215,0,.5);
+    position:relative;
+    animation:open .8s ease;
+}
+
+.modal-content h2{
+    font-size:2.4rem;
+    color:gold;
+    margin-bottom:20px;
+}
+
+.modal-content p{
+    line-height:1.9;
+    opacity:.9;
+}
+
+.details{
+    margin-top:25px;
+    list-style:none;
+}
+
+.details li{
+    margin-bottom:10px;
+}
+
+/* ===== CLOSE ===== */
+.close{
+    position:absolute;
+    top:20px;
+    right:25px;
+    font-size:1.6rem;
+    color:gold;
+    text-decoration:none;
+}
+
+.close:hover{
+    transform:rotate(90deg);
+}
+
+/* ===== SIGIL ===== */
+
+
+/* ===== ANIMATIONS ===== */
+@keyframes glow{
+    from{text-shadow:0 0 15px gold;}
+    to{text-shadow:0 0 45px gold,0 0 80px #ffcc00;}
+}
+
+@keyframes spin{
+    from{transform:rotate(0);}
+    to{transform:rotate(360deg);}
+}
+
+@keyframes open{
+    from{transform:scale(.6);opacity:0;}
+    to{transform:scale(1);opacity:1;}
+}
