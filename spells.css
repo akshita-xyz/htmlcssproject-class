@@ -5,6 +5,17 @@
     box-sizing:border-box;
 }
 
+/* Override the global section styles for spell sections */
+.spell-book-section {
+    height: auto !important;
+    min-height: 100vh;
+}
+
+.spell-book {
+    height: auto !important;
+    padding: 40px 60px 100px !important;
+}
+
 body{
     background:radial-gradient(circle at top,#020111,#000);
     color:#f4f1e8;
